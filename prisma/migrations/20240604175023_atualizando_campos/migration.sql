@@ -1,0 +1,15 @@
+-- AlterTable
+ALTER TABLE "check_ins" ADD COLUMN     "abertura_chamado" TIMESTAMP(3),
+ADD COLUMN     "assinatura" TEXT,
+ADD COLUMN     "chamado" TEXT,
+ADD COLUMN     "consideracoes" TEXT,
+ADD COLUMN     "contrato" TEXT,
+ADD COLUMN     "detalhes" TEXT,
+ADD COLUMN     "fim_atendimento" TIMESTAMP(3),
+ADD COLUMN     "garantia" TEXT,
+ADD COLUMN     "inicio_atendimento" TIMESTAMP(3),
+ADD COLUMN     "km_fim" TEXT,
+ADD COLUMN     "km_inicio" TEXT,
+ADD COLUMN     "observacoes" TEXT,
+ADD COLUMN     "relatorio_tecnico" TEXT,
+ADD COLUMN     "tipo" TEXT;

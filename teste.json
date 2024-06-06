@@ -1,0 +1,12 @@
+{
+	"chamado": "2165416544",
+	"abertura_chamado": "2024-06-06T01:48:41.817Z",
+    "inicio_atendimento": "2024-06-06T01:49:41.817Z",
+    "fim_atendimento":"2024-06-06T01:50:41.817Z",
+    "km_inicio": "1234",
+    "km_fim": "1254",
+    "contrato": "true",
+    "garantia": "true",
+    "tipo": "Preventiva",
+	"user": "c29e2f62-2ed9-41c9-b57e-8a6d37880e45"
+}

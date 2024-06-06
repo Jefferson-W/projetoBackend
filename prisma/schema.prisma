@@ -6,34 +6,42 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
 model User {
-  id            String   @id @default(uuid())
+  id            String    @id @default(uuid())
   name          String
-  email         String   @unique
+  email         String    @unique
   password_hash String
-  created_at    DateTime @default(now())
-  checkIns CheckIn[]
+  created_at    DateTime  @default(now())
+  cpf           String
+  endereco      String?
+  numero        String?
+  bairro        String?
+  cidade        String?
+  estado        String?
+  checkIns      CheckIn[]
+
   @@map("users")
 }
 
 model CheckIn {
-  id           String    @id @default(uuid())
-  created_at   DateTime  @default(now())
-  validated_at DateTime?
-  user    User   @relation(fields: [user_id], references: [id])
-  user_id String
-  gym    Gym    @relation(fields: [gym_id], references: [id])
-  gym_id String
-  @@map("check_ins")
-}
-
-model Gym {
-  id          String  @id @default(uuid())
-  title       String
-  description String?
-  phone       String?
-  latitude    Decimal
-  longitude   Decimal
-  checkIns CheckIn[]
-  @@map("gyms")
+  id                 String    @id @default(uuid())
+  chamado            String?
+  created_at         DateTime  @default(now())
+  validated_at       DateTime?
+  abertura_chamado   DateTime?
+  inicio_atendimento DateTime?
+  fim_atendimento    DateTime?
+  km_inicio          String?
+  km_fim             String?
+  contrato           String?
+  garantia           String?
+  tipo               String?
+  observacoes        String?
+  detalhes           String?
+  relatorio_tecnico  String?
+  consideracoes      String?
+  assinatura         String?
+  user               User      @relation(fields: [user_id], references: [id])
+  user_id            String
 }
