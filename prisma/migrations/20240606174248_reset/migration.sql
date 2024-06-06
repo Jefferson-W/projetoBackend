@@ -18,7 +18,7 @@ CREATE TABLE "users" (
 -- CreateTable
 CREATE TABLE "CheckIn" (
     "id" TEXT NOT NULL,
-    "chamado" TEXT,
+    "chamado" TEXT NOT NULL,
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "validated_at" TIMESTAMP(3),
     "abertura_chamado" TIMESTAMP(3),
