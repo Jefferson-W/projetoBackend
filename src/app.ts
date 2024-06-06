@@ -5,6 +5,8 @@ import cors from '@fastify/cors'
 
 export const app = fastify()
 
-app.register(cors)
+app.register(cors, {
+    origin: false
+})
 
 app.register(appRoutes)
