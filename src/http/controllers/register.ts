@@ -43,7 +43,7 @@ export async function register(request: FastifyRequest, reply: FastifyReply) {
             checkIns
         })
     } catch (err) {
-        return reply.status(409).send()
+        return reply.status(409).send(err)
     }
 
     return reply.status(201).send()
