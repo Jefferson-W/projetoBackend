@@ -13,7 +13,6 @@ interface RegisterUseCaseRequest {
   bairro: string
   cidade: string
   estado: string
-  checkIns: string
 }
 
 export async function registerUseCase({
@@ -26,7 +25,6 @@ export async function registerUseCase({
   bairro,
   cidade,
   estado,
-  checkIns
 
 }: RegisterUseCaseRequest) {
   const password_hash = await hash(password, 6)
@@ -52,12 +50,7 @@ export async function registerUseCase({
     numero,
     bairro,
     cidade,
-    estado,
-    checkIns: {
-      create:{
-        chamado: checkIns
-      }
-    }
+    estado
 
   })
 }

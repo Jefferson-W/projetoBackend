@@ -13,7 +13,6 @@ export async function register(request: FastifyRequest, reply: FastifyReply) {
         bairro: z.string(),
         cidade: z.string(),
         estado: z.string(),
-        checkIns: z.string(),
     })
 
     const {
@@ -26,7 +25,6 @@ export async function register(request: FastifyRequest, reply: FastifyReply) {
         bairro,
         cidade,
         estado,
-        checkIns
     } = registerBodySchema.parse(request.body)
 
     try {
@@ -40,7 +38,6 @@ export async function register(request: FastifyRequest, reply: FastifyReply) {
             bairro,
             cidade,
             estado,
-            checkIns
         })
     } catch (err) {
         return reply.status(409).send(err)
