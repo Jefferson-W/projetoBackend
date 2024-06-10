@@ -8,7 +8,10 @@ import { z } from 'zod'
 export async function appRoutes(app: FastifyInstance) {
 
   app.get('/', async (req: FastifyRequest, res: FastifyReply) => {
-    res.status(200).send("Welcome to API")
+    res.status(200).send({
+      status: 200,
+      message: "Welcome to API",
+    })
   })
 
   app.post('/users', register)
