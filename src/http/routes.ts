@@ -6,7 +6,13 @@ import { z } from 'zod'
 
 
 export async function appRoutes(app: FastifyInstance) {
+
+  app.get('/', async (req: FastifyRequest, res: FastifyReply) => {
+    res.status(200).send("Welcome to API")
+  })
+
   app.post('/users', register)
+
   app.post('/check', registerCheck)
 
   app.get('/allUsers', async () => {
