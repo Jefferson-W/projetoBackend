@@ -26,6 +26,14 @@ export async function appRoutes(app: FastifyInstance) {
 
   })
 
+  app.get('/allUsersChecks', async () => {
+
+    const users = await prisma.user.findMany({
+      include: { CheckIn: true }
+    })
+    return { users }
+  })
+
   app.get('/allChecks', async () => {
 
     const checks = await prisma.checkIn.findMany()
