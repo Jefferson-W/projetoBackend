@@ -1,0 +1,4 @@
+1 - Rodar comando docker up
+2 - Rodar comando start
+
+Se der erro de banco, Rodar comando migrate deploy
