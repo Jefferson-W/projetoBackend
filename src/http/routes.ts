@@ -29,7 +29,7 @@ export async function appRoutes(app: FastifyInstance) {
   app.get('/allUsersChecks', async () => {
 
     const users = await prisma.checkIn.findMany({
-      include: { user: true }
+      include: { usuario: true }
     })
     return { users }
   })

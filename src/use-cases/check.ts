@@ -39,7 +39,7 @@ export async function registerCheckCase({
         contrato,
         garantia,
         tipo,
-        user: {
+        usuario: {
             connect: {
                 id: user
             }
